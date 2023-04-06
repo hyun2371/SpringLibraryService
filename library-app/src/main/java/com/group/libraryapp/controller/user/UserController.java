@@ -4,7 +4,6 @@ import com.group.libraryapp.domain.user.response.UserResponse;
 import com.group.libraryapp.dto.calculator.request.UserUpdateRequest;
 import com.group.libraryapp.dto.user.request.UserCreateRequest;
 import com.group.libraryapp.service.user.UserService;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,12 +11,9 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    private final JdbcTemplate jdbcTemplate;
     private final UserService userService;
-    public UserController(JdbcTemplate jdbcTemplate){
-
-        this.jdbcTemplate = jdbcTemplate;
-        this.userService = new UserService(jdbcTemplate);
+    public UserController(UserService userService){
+        this.userService = userService;
     }
     @PostMapping("/user")
     public void saveUser(@RequestBody UserCreateRequest request){
