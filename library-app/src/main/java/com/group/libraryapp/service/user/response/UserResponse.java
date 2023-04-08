@@ -38,6 +38,3 @@ public class UserResponse {
         return age;
     }
 }
-
-
-
