@@ -58,7 +58,7 @@ public class BookService {
                 .orElseThrow(IllegalArgumentException::new);
 
         UserLoanHistory history = userLoanHistoryRepository.findByUserIdAndBookName(user.getId(), request.getBookName())
-                .orElseThrow(IllegalAccessError::new);
+                .orElseThrow(IllegalArgumentException::new);
 
         history.doReturn();
 //        userLoanHistoryRepository.save(history); //변경 감지하므로 없어도 됨
