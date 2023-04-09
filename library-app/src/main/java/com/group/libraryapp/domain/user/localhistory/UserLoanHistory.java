@@ -12,6 +12,7 @@ public class UserLoanHistory {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(nullable = false)
     private User user;
 
     private String bookName;
