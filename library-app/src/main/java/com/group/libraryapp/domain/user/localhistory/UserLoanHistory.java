@@ -26,4 +26,9 @@ public class UserLoanHistory {
         this.bookName = bookName;
         this.isReturn = false;
     }
+
+    //반납
+    public void doReturn(){
+        this.isReturn = true;
+    }
 }
