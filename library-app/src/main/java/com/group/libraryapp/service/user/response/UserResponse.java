@@ -1,7 +1,9 @@
-package com.group.libraryapp.domain.user.response;
+package com.group.libraryapp.service.user.response;
 
 import com.group.libraryapp.domain.user.User;
+import lombok.Getter;
 
+@Getter
 public class UserResponse {
     private long id;
     private String name;
@@ -23,18 +25,5 @@ public class UserResponse {
         this.id = id;
         this.name = name;
         this.age = age;
-    }
-
-
-    public long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Integer getAge() {
-        return age;
     }
 }

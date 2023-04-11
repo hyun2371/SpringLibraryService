@@ -1,10 +1,9 @@
 package com.group.libraryapp.controller.user;
 
-import com.group.libraryapp.domain.user.response.UserResponse;
 import com.group.libraryapp.dto.calculator.request.UserUpdateRequest;
 import com.group.libraryapp.dto.user.request.UserCreateRequest;
-import com.group.libraryapp.service.user.UserServiceV1;
 import com.group.libraryapp.service.user.UserServiceV2;
+import com.group.libraryapp.service.user.response.UserResponse;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

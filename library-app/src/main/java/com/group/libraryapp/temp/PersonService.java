@@ -1,18 +1,15 @@
 package com.group.libraryapp.temp;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@RequiredArgsConstructor
 public class PersonService {
 
     private final AddressRepository addressRepository;
     private final PersonRepository personRepository;
-
-    public PersonService(AddressRepository addressRepository, PersonRepository personRepository) {
-        this.addressRepository = addressRepository;
-        this.personRepository = personRepository;
-    }
 
     @Transactional
     public void savePerson(){

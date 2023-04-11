@@ -1,9 +1,10 @@
 package com.group.libraryapp.service.user;
 
 import com.group.libraryapp.domain.user.UserRepository;
-import com.group.libraryapp.domain.user.response.UserResponse;
 import com.group.libraryapp.dto.calculator.request.UserUpdateRequest;
 import com.group.libraryapp.dto.user.request.UserCreateRequest;
+import com.group.libraryapp.service.user.response.UserResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import com.group.libraryapp.domain.user.User;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,11 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
+@Service @RequiredArgsConstructor
 public class UserServiceV2 {
-    public UserServiceV2(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     private final UserRepository userRepository;
 

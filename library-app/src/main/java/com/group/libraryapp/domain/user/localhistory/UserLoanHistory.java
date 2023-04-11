@@ -1,10 +1,14 @@
 package com.group.libraryapp.domain.user.localhistory;
 
 import com.group.libraryapp.domain.user.User;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
+@Entity @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Getter
 public class UserLoanHistory {
 
     @Id
@@ -19,8 +23,6 @@ public class UserLoanHistory {
 
     private boolean isReturn;
 
-    public UserLoanHistory() {
-    }
 
     public UserLoanHistory(User user, String bookName) {
         this.user = user;

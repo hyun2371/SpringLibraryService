@@ -1,20 +1,17 @@
 package com.group.libraryapp.service.user;
 
-import com.group.libraryapp.domain.user.response.UserResponse;
 import com.group.libraryapp.dto.calculator.request.UserUpdateRequest;
 import com.group.libraryapp.dto.user.request.UserCreateRequest;
 import com.group.libraryapp.repository.user.UserJdbcRepository;
+import com.group.libraryapp.service.user.response.UserResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service @RequiredArgsConstructor
 public class UserServiceV1 {
     private final UserJdbcRepository userJdbcRepository;
-
-    public UserServiceV1(UserJdbcRepository userJdbcRepository){
-        this.userJdbcRepository = userJdbcRepository;
-    }
 
     public void saveUser(UserCreateRequest request) {
         userJdbcRepository.saveUser(request.getName(), request.getAge());
