@@ -11,6 +11,7 @@ public class Person {
     private String name;
 
     @OneToOne
+    @JoinColumn(nullable = false)
     private Address address;
 
     public void setAddress(Address address) {

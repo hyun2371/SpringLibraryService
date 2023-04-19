@@ -16,4 +16,8 @@ public class Address {
     public void setPerson(Person person) {
         this.person = person;
     }
+
+    public Person getPerson(){
+        return this.getPerson();
+    }
 }

@@ -3,11 +3,23 @@ package com.group.libraryapp.service.user.response;
 import com.group.libraryapp.domain.user.User;
 import lombok.Getter;
 
-@Getter
+
 public class UserResponse {
     private long id;
     private String name;
     private Integer age;
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
 
     public UserResponse(long id, User user) {
         this.id = id;
